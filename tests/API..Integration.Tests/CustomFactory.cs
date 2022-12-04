@@ -11,7 +11,7 @@ using Xunit;
 
 namespace API.Tests.Integration;
 
-public class CustomerApiFactory : WebApplicationFactory<IApiMarker>, IAsyncLifetime
+public class CustomFactory : WebApplicationFactory<IApiMarker>, IAsyncLifetime
 {
     private readonly PostgreSqlTestcontainer _dbContainer =
         new TestcontainersBuilder<PostgreSqlTestcontainer>()

@@ -9,7 +9,7 @@ using Xunit;
 
 namespace API.Tests.Integration.ControllerTest;
 
-public class UpdateControllerTestTests : IClassFixture<CustomerApiFactory>
+public class UpdateControllerTestTests : IClassFixture<CustomFactory>
 {
     private readonly HttpClient _client;
 
@@ -19,7 +19,7 @@ public class UpdateControllerTestTests : IClassFixture<CustomerApiFactory>
         .RuleFor(x => x.GitHubUsername, "ZahraBayatgh")
         .RuleFor(x => x.DateOfBirth, faker => faker.Person.DateOfBirth.Date);
 
-    public UpdateControllerTestTests(CustomerApiFactory apiFactory)
+    public UpdateControllerTestTests(CustomFactory apiFactory)
     {
         _client = apiFactory.CreateClient();
     }
